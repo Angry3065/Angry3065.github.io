@@ -26,10 +26,7 @@
               link[rel="icon"] {
                 border-radius: 50%;
               }
-              function toggleMenu() {
-  var menu = document.querySelector('.menu');
-  menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-}
+              
 
 
 
@@ -135,6 +132,15 @@
 .menu {
   display: none; /* Menü standardmäßig ausblenden */
 }
+function toggleMenu() {
+  var menu = document.getElementById('menu');
+  menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
+
+function handleButtonClick(buttonNumber) {
+  // Hier kannst du je nach geklicktem Button verschiedene Aktionen ausführen
+  alert('Button ' + buttonNumber + ' wurde geklickt!');
+}
 
 
 
@@ -142,19 +148,18 @@
   </style>
 </head>
 <body>
+  
     <div class="hamburger-icon" onclick="toggleMenu()">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
       </div>
       
-      <div class="menu">
-        <!-- Hier kommen deine Menüpunkte oder -inhalte -->
-        <ul>
-          <li><a href="#">Menüpunkt 1</a></li>
-          <li><a href="#">Menüpunkt 2</a></li>
-          <li><a href="#">Menüpunkt 3</a></li>
-        </ul>
+      <div class="menu" id="menu">
+        <!-- Hier sind verschiedene Buttons oder Menüpunkte -->
+        <button onclick="handleButtonClick(1)">Button 1</button>
+        <button onclick="handleButtonClick(2)">Button 2</button>
+        <button onclick="handleButtonClick(3)">Button 3</button>
       </div>
 
 <div class="black-bar">
