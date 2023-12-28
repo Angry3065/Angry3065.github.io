@@ -5,6 +5,7 @@
         <title>
             Das ultimative Katzenspielzeug
         </title>
+        
         <style>
             body {
             background:beige;
@@ -25,6 +26,10 @@
               link[rel="icon"] {
                 border-radius: 50%;
               }
+              function toggleMenu() {
+  var menu = document.querySelector('.menu');
+  menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
 
 
 
@@ -101,22 +106,56 @@
       padding: 10px; /* Anpassen des Innenabstands */
     }
 
-    /* Stile für die Buttons innerhalb der schwarzen Leiste */
+    
     .black-bar button {
-      background-color: #333; /* Hintergrundfarbe der Buttons */
-      color: white; /* Textfarbe der Buttons */
-      border: none; /* Entfernen der Rahmenlinie */
-      padding: 8px 16px; /* Anpassen der Abstände */
-      margin-right: 10px; /* Rechter Abstand zwischen den Buttons */
-      border-radius: 5px; /* Abrundung der Ecken */
+      background-color: #333; 
+      color: white; 
+      border: none; 
+      padding: 8px 16px; 
+      margin-right: 10px; 
+      border-radius: 5px; 
       cursor: pointer; 
     }
           .black-bar button:hover {
       background-color: #555; 
     }
+
+    .hamburger-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: #000; /* Farbe der Linien */
+  margin: 5px 0; /* Abstand zwischen den Linien */
+}
+
+.menu {
+  display: none; /* Menü standardmäßig ausblenden */
+}
+
+
+
+
   </style>
 </head>
 <body>
+    <div class="hamburger-icon" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      
+      <div class="menu">
+        <!-- Hier kommen deine Menüpunkte oder -inhalte -->
+        <ul>
+          <li><a href="#">Menüpunkt 1</a></li>
+          <li><a href="#">Menüpunkt 2</a></li>
+          <li><a href="#">Menüpunkt 3</a></li>
+        </ul>
+      </div>
 
 <div class="black-bar">
   
