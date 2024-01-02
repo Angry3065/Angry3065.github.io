@@ -1,0 +1,97 @@
+<html lang="de">
+<head>
+    
+<style>
+/* Stile für den Login-Bildschirm */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: url(Bilder/image.png);
+}
+
+.login-container {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+</style>
+
+
+<script>
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Verhindere das Standardverhalten des Formulars
+
+  // Überprüfe hier normalerweise die Benutzerdaten (z. B. über eine API-Anfrage)
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
+  // Hier ein einfaches Beispiel für eine Überprüfung (ersetze es mit deiner eigenen Logik)
+  if (username === 'benutzername' && password === 'passwort') {
+    // Authentifizierung erfolgreich - Weiterleitung oder Anzeige der Hauptseite
+    alert('Erfolgreich eingeloggt!');
+    // Hier könntest du zur Hauptseite weiterleiten: window.location.href = 'hauptseite.html';
+  } else {
+    // Fehlermeldung für falsche Anmeldeinformationen
+    document.getElementById('error-message').textContent = 'Falscher Benutzername oder Passwort.';
+  }
+});
+
+</script>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="Bilder/Katze2.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"
+
+</head>
+
+<body>
+  <div class="login-container">
+    <form id="login-form">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Benutzername" required>
+      <input type="password" id="password" placeholder="Passwort" required>
+      <button type="submit">Anmelden</button>
+      <p id="error-message" class="error-message"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
