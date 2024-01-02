@@ -141,9 +141,10 @@
           .black-bar button:hover {
       background-color: #555; 
     }
-    .party-hut:hover {
-      animation: explode 0.5s ease-in-out;
-    }
+    .Ladebildschirm {
+      border-radius: 50%;
+      ]}
+    
 
    
 
@@ -152,9 +153,34 @@
   </style>
 </head>
 <body>
+  
+  <div id="ladebildschirm">
+    <img src="Bilder/image.png" alt="Ladebildschirm">
+  </div>
+
+  <div id="inhalt" style="display: none;">
+    <!-- Hier kommt der Rest deiner Webseite -->
+    <img id="meinBild" src="Bilder/Katze.png" alt="Dein Bild">
+    <!-- Weitere Inhalte hier -->
+  </div>
+
+  <script>
+    // JavaScript, um den Ladebildschirm zu steuern
+    window.addEventListener('load', function() {
+      var meinBild = document.getElementById('meinBild');
+      var ladebildschirm = document.getElementById('ladebildschirm');
+      var inhalt = document.getElementById('inhalt');
+
+      meinBild.onload = function() {
+        // Das Bild ist geladen, zeige den Inhalt und blende den Ladebildschirm aus
+        inhalt.style.display = 'block';
+        ladebildschirm.style.display = 'none';
+      };
+    });
+  </script>
     <font-face="Arial"></font-face>
 <h1>Limitierter Silvester Button </h1>
-    <a href="https://www.neue-webseite.de"style="position: relative; top: -800px; left: 300px;"target="_blank" rel="noopener noreferrer" class="party-hut" onclick="explodeHat(event)">🎉</a>
+    <a href="https://www.neue-webseite.de"style="position: relative; top: -800px; right: 300px;"target="_blank" rel="noopener noreferrer" class="party-hut" onclick="explodeHat(event)">🎉</a>
 
 <script>
   function explodeHat() {
