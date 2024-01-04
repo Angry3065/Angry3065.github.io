@@ -63,10 +63,12 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 
   // Hier ein einfaches Beispiel für eine Überprüfung (ersetze es mit deiner eigenen Logik)
   if (username === 'benutzername' && password === 'passwort') {
-    window.location.href = 'index.html2'; // Ersetze 'hauptseite.html' durch den Pfad zur gewünschten Seite
+    window.location.href = 'index.html2'; // Weiterleitung zur gewünschten Seite nach erfolgreichem Login
   } else {
     // Authentifizierung erfolgreich - Weiterleitung oder Anzeige der Hauptseite
     alert('Erfolgreich eingeloggt!');
+    window.location.href = 'index.html2'; // Weiterleitung zur gewünschten Seite nach erfolgreichem Login
+  } else {
     // Hier könntest du zur Hauptseite weiterleiten: window.location.href = 'hauptseite.html';
   } else {
     // Fehlermeldung für falsche Anmeldeinformationen
