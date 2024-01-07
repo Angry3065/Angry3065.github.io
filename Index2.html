@@ -7,7 +7,7 @@
                  
         <style>
             body {
-            background:beige;
+            background: url(Bilder/image.png);
             color: black;
             display: flex;
                 flex-direction: column;
@@ -25,6 +25,22 @@
               link[rel="icon"] {
                 border-radius: 50%;
               }
+             .text-container {
+                font-family: Arial, Helvetica, sans-serif,;
+                color: darkblue;
+
+
+              }
+
+
+
+             } 
+
+
+
+
+
+
         </style>
         <link rel="icon" href="Bilder/Katze2.png" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
@@ -34,7 +50,8 @@
             <img src="Bilder/Katze.png" width="400" height="350" alt="" style="border-radius: 10%;"/>
         </div>
         <h1>
-            <fontface="Arial"></fontface>
+            <div class="text-container">
+            
         Liebe Kunden,
         <br />
         <br />
@@ -49,6 +66,7 @@
         <br /> 
     </h1>
 </fontface>
+</div>
 <style>
     a {
         font-size: 18px;
@@ -64,7 +82,7 @@
         padding: 50px 50px;
         text-align: center;
         text-decoration: none;
-        background-color: gray;
+        background-color: white;
         color:beige;
         border-radius: 50%;
         border: 1px solid grey;
@@ -77,10 +95,33 @@
         border-color:blanchedalmond;
         color:red;
     }
-    
+    .button2 {
+        padding: 10px 10px;
+        border-radius: 10px;
+        color: powderblue;
+        position: relative;  
+        top: -800px;
+        left: 300px;
+        transition: all 300ms linear;
+    }
+    .transparent .button2 {
+        background-color: transparent;
+        border: 10px solid #000;
+        color: #000;
+        
+    }
+
+    .button2:hover {
+        background-color: transparent;
+        color: #000;
+        font-size: 50px;
+    }
+
+
     .black-bar {
       background-color: black;
-      padding: 10px; /* Anpassen des Innenabstands */
+      padding: 10px; 
+      top: 10px;
     }
 
     
@@ -92,6 +133,7 @@
       margin-right: 10px; 
       border-radius: 5px; 
       cursor: pointer; 
+      top: 10px;
     }
           .black-bar button:hover {
       background-color: #555; 
@@ -117,14 +159,17 @@
 </style>
 </body>
 <h1>
+    <div style="top: 10px;">
     Klicken Sie hier um das Spielzeug zu kaufen  
 </h1>
+</div>
 <body>
+    <button class="button2">Log in</button>
     <a href="fehlanzeige.html" class="button"></a>
 </body>
 <style>
       .search-bar {
-        border: 5px solid black;
+     top: 10px;
       }
     
     
