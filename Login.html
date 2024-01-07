@@ -75,9 +75,9 @@ document.getElementById('login-form').addEventListener('submit', function(event)
   } else {
     // Authentifizierung erfolgreich - Weiterleitung oder Anzeige der Hauptseite
     alert('Erfolgreich eingeloggt!');
-    window.location.href = 'index2.html'; // Weiterleitung zur gewünschten Seite nach erfolgreichem Login
+    window.location.href ='index2.html'; // Weiterleitung zur gewünschten Seite nach erfolgreichem Login
   } else {
-    // Hier könntest du zur Hauptseite weiterleiten: window.location.href = 'hauptseite.html';
+     window.location.href ='index2.html'; // Hier könntest du zur Hauptseite weiterleiten: window.location.href = 'hauptseite.html';
   } else {
     // Fehlermeldung für falsche Anmeldeinformationen
     document.getElementById('error-message').textContent = 'Falscher Benutzername oder Passwort.';
@@ -99,7 +99,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
       <h2>Login</h2>
       <input type="text" id="username" placeholder="Benutzername" required>
       <input type="password" id="password" placeholder="Passwort" required>
-      <button type="submit">Anmelden</button>
+     <a href="Index2.html"type="submit">Anmelden</a>
       <p id="error-message" class="error-message"></p>
     </form>
   </div>
