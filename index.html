@@ -5,7 +5,7 @@
         <title>
             Das ultimative Katzenspielzeug
         </title>
-                 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">     
         <style>
             body {
             background: url(Bilder/image.png);
@@ -20,6 +20,31 @@
                 font-size: large;
                 border: 10px solid black;
               } 
+              #cookie-banner {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Stil für den Akzeptieren-Button */
+    #accept-button {
+      background-color: powderblue;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
 
 
 
@@ -151,6 +176,33 @@
   </style>
 </head>
 <body>
+    <div id="cookie-banner" style="color: powderblue;">
+        Diese Website verwendet Cookies. Durch die Nutzung unserer Website erklären Sie sich damit einverstanden.
+        <button id="accept-button">Akzeptieren</button>
+      </div>
+      
+      <script>
+        // Funktion zum Setzen des Cookies und Ausblenden des Cookie-Banners
+        function setCookieAndHideBanner() {
+          // Setzen Sie hier Ihren eigenen Cookie-Namen und Wert
+          document.cookie = "cookie_accepted=true; expires=Thu, 01 Jan 2025 00:00:00 UTC; path=/";
+          document.getElementById('cookie-banner').style.display = 'none';
+        }
+      
+        // Überprüfen, ob der Cookie bereits akzeptiert wurde
+        function checkCookie() {
+          var cookieAccepted = document.cookie.indexOf('cookie_accepted') !== -1;
+          if (!cookieAccepted) {
+            document.getElementById('cookie-banner').style.display = 'block';
+          }
+        }
+      
+        // Event Listener für den Akzeptieren-Button
+        document.getElementById('accept-button').addEventListener('click', setCookieAndHideBanner);
+      
+        // Überprüfen Sie den Cookie-Status beim Laden der Seite
+        window.onload = checkCookie;
+      </script>
 <div class="black-bar">
   
   <button onclick="window.location.href='https://www.tiktok.com/@lukskitv'">Sozial Media</button>
