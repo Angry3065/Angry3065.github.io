@@ -42,7 +42,7 @@ button {
   border: 1px solid #ccc;
 }
 
-button {
+.hi {
   position: relative;
   top: 10px;
   right: 2cm;
@@ -102,7 +102,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
       <h2>Login</h2>
       <input type="text" id="username" placeholder="Benutzername" required>
       <input type="password" id="password" placeholder="Passwort" required>
-     <a href="index.html"type="submit" class="button">Anmelden</a>
+    <button onclick="window.location.href='index.html'" class="hi">Anmelden</button>
       <p id="error-message" class="error-message"></p>
     </form>
   </div>
