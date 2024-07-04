@@ -57,9 +57,8 @@ link[rel="icon"] {
 .text-container {
   font-family: "Kalam", cursive;
   color: whitesmoke;
-  display: flex;
-  justify-content: left;
- 
+  position: relative;
+  left: auto;
   
   border: 1px solid black;
 
