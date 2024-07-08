@@ -58,8 +58,8 @@ link[rel="icon"] {
   font-family: "Kalam", cursive;
   color: whitesmoke;
  float: left;
-  border: 1px solid black;
-
+position: relative;
+left:0 ;
 
 
 }
@@ -115,8 +115,8 @@ link[rel="icon"] {
 
 .black-bar {
   background-color: whitesmoke;
-  position: fixed;
-  top: 100%;
+  position: relative;
+  top: -800px;
   padding: 15px;
   background: linear-gradient(to bottom, whitesmoke, #545863);
   width: 100%;
