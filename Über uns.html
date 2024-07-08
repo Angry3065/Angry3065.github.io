@@ -56,45 +56,52 @@
       transition: all 500ms linear;
     }
 
-    :hover {
-      padding: 40px 40px;
-      border-radius: 50%;
-      background-color: aquamarine;
-      border-color: blanchedalmond;
-      color: red;
-    }
+    .Schriftzug {
 
-    .black-bar {
-      background-color: whitesmoke;
-      position: relative;
-      top:px;
-
-      background: linear-gradient(to bottom, whitesmoke, #545863);
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-    }
-
-
-    .black-bar button {
-      background-color: transparent;
+      font-family: "Permanent Marker", cursive;
+      font-size: 20px;
+      font-style: normal;
       color: darkblue;
-      ;
-      border: none;
-      padding: 8px 10px;
-      margin-right: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      top: 10px;
-      right: -300px;
+
+      :hover {
+        padding: 40px 40px;
+        border-radius: 50%;
+        background-color: aquamarine;
+        border-color: blanchedalmond;
+        color: red;
+      }
+
+      .black-bar {
+        background-color: whitesmoke;
+        position: relative;
+        top: px;
+        padding: 15px;
+        background: linear-gradient(to bottom, whitesmoke, #545863);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+
+      .black-bar button {
+        background-color: transparent;
+        color: darkblue;
+        ;
+        border: none;
+        padding: 8px 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        top: 10px;
+        right: -300px;
 
 
 
-    }
+      }
 
-    .black-bar button:hover {
-      background-color: transparent;
-    }
+      .black-bar button:hover {
+        background-color: transparent;
+      }
   </style>
 </head>
 
@@ -153,6 +160,11 @@
             <button onclick="window.location.href='Login.html'">Log in </button>
             <button onclick="window.location.href='fehlanzeige.html'">kaufen</button>
             <button></button>
+            <div class="Schriftzug">
+
+              Das ultimative Katzenspielzeug
+
+            </div>
           </div>
 
 
