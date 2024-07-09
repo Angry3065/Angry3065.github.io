@@ -117,7 +117,7 @@ left:0 ;
 .black-bar {
   background-color: whitesmoke;
   position: relative;
-  top: 1150px;
+  top: -1100px;
   padding: 15px;
   background: linear-gradient(to bottom, whitesmoke, #545863);
   width: 100%;
