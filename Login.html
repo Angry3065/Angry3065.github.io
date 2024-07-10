@@ -68,24 +68,20 @@ button:hover {
 document.getElementById('login-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Verhindere das Standardverhalten des Formulars
 
-  // Überprüfe hier normalerweise die Benutzerdaten (z. B. über eine API-Anfrage)
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
 
-  // Hier ein einfaches Beispiel für eine Überprüfung (ersetze es mit deiner eigenen Logik)
-  if (username === 'benutzername' && password === 'passwort') {
-    window.location.href = 'index2.html'; // Weiterleitung zur gewünschten Seite nach erfolgreichem Login
-  } else {
-    // Authentifizierung erfolgreich - Weiterleitung oder Anzeige der Hauptseite
-    alert('Erfolgreich eingeloggt!');
-    window.location.href ='index2.html'; // Weiterleitung zur gewünschten Seite nach erfolgreichem Login
-  } else {
-     window.location.href ='index2.html'; // Hier könntest du zur Hauptseite weiterleiten: window.location.href = 'hauptseite.html';
-  } else {
-    // Fehlermeldung für falsche Anmeldeinformationen
-    document.getElementById('error-message').textContent = 'Falscher Benutzername oder Passwort.';
+  // Überprüfung der Passwortlänge
+  if (password.length < 8) {
+    document.getElementById('error-message').textContent = 'Das Passwort muss mindestens 8 Zeichen lang sein.';
+    return;
   }
+
+  // Bei korrekter Passwortlänge Weiterleitung zur gewünschten Seite
+  alert('Erfolgreich eingeloggt!');
+  window.location.href = 'index2.html'; // Weiterleitung zur gewünschten Seite nach erfolgreichem Login
 });
+
 
 </script>
   <meta charset="UTF-8">
