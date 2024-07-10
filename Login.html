@@ -1,6 +1,19 @@
 <html lang="de">
 <head>
+  <body>
+    <div class="login-container">
+      <form id="login-form">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Benutzername" required>
+        <input type="password" id="password" placeholder="Passwort" required>
+      <button onclick="window.location.href='index.html'" class="hi">Anmelden</button>
+        <p id="error-message" class="error-message"></p>
+      </form>
+    </div>
   
+    <script src="script.js"></script>
+  </body>
+</head>
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -79,8 +92,9 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 
   // Bei korrekter Passwortlänge Weiterleitung zur gewünschten Seite
   alert('Erfolgreich eingeloggt!');
-  window.location.href = 'index.html'; // Weiterleitung zur gewünschten Seite nach erfolgreichem Login
+  window.location.href = 'index2.html'; // Weiterleitung zur gewünschten Seite nach erfolgreichem Login
 });
+
 
 
 </script>
@@ -90,7 +104,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
   <link rel="icon" href="Bilder/Katze2.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css"
 
-</head>
+
 
 <body>
   <div class="login-container">
@@ -103,6 +117,5 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     </form>
   </div>
 
-  <script src="script.js"></script>
 </body>
 </html>
